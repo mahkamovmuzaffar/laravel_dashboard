@@ -2,8 +2,9 @@
 /vendor
 /node_modules
 /public/storage
+/storage/*
 /storage/*.key
-/storage/logs/*
+/storage/logs
 /.env
 .env.*
 .phpunit.result.cache

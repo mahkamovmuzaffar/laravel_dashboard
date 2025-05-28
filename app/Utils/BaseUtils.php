@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Helpers;
+namespace App\Utils;
 
-class FormatHelper
+class BaseUtils
 {
     /**
      * Mask card number: Show first 6 and last 4 digits only.

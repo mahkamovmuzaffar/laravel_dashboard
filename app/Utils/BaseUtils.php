@@ -26,7 +26,7 @@ class BaseUtils
         $clean = preg_replace('/\D/', '', $phone);
 
         if (strlen($clean) === 12) {
-            return '+'.substr($clean, 0, 3) . ' (' . substr($clean, 3, 2) . ') ' . substr($clean, 5, 3) . '-' . substr($clean, 8, 2) . '-' . substr($clean, 10);
+            return '+' . substr($clean, 0, 3) . ' (' . substr($clean, 3, 2) . ') ' . substr($clean, 5, 3) . '-' . substr($clean, 8, 2) . '-' . substr($clean, 10);
         }
 
         return $phone; // fallback
@@ -39,6 +39,19 @@ class BaseUtils
     public static function phone_country_check(string $phone): bool
     {
         return substr(preg_replace('/\D/', '', $phone), 0, 3) === '998';
+    }
+
+
+    /**
+     * Create a hash of any data string using HMAC-SHA256 (optional secret).
+     */
+    public static function make_hash(string $data, string $secret = null): string
+    {
+        if ($secret) {
+            return hash_hmac('sha256', $data, $secret);
+        }
+
+        return hash('sha256', $data);
     }
 }
 

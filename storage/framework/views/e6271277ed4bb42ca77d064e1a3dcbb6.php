@@ -17,7 +17,7 @@
                         <span key="t-user-management"><?php echo app('translator')->get('translation.User_Management'); ?></span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#" key="t-users">Users</a></li>
+                        <li><a href="<?php echo e(route('users.index')); ?>" key="t-users">Users</a></li>
                         <li><a href="#" key="t-permissions">Permissions</a></li>
                         <li><a href="#" key="t-roles">Roles</a></li>
                     </ul>

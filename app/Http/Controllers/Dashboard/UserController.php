@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -12,11 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-//        $users = User::with('roles')->get(); // if using Spatie
-//        $roles = Role::all(); // for dropdown
-        $users = [];
-        $roles = [];
-
+        $users = User::with('roles')->get(); // if using Spatie
+        $roles = Role::all(); // for dropdown
 
         return view('user.index', compact('users', 'roles'));
     }

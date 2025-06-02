@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('roo
 //Update User Details
 Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
+
+Route::resource('users', UserController::class);
 
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 

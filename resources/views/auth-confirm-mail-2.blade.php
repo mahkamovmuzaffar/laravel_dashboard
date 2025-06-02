@@ -37,19 +37,22 @@
 
                                                     <div dir="ltr">
                                                         <div class="owl-carousel owl-theme auth-review-carousel"
-                                                            id="auth-review-carousel">
+                                                             id="auth-review-carousel">
                                                             <div class="item">
                                                                 <div class="py-3">
-                                                                    <p class="font-size-16 mb-4">" Fantastic theme with a
+                                                                    <p class="font-size-16 mb-4">" Fantastic theme with
+                                                                        a
                                                                         ton of options. If you just want the HTML to
                                                                         integrate with your project, then this is the
                                                                         package. You can find the files in the 'dist'
-                                                                        folder...no need to install git and all the other
+                                                                        folder...no need to install git and all the
+                                                                        other
                                                                         stuff the documentation talks about. "</p>
 
                                                                     <div>
-                                                                        <h4 class="font-size-16 text-primary">Abs1981</h4>
-                                                                        <p class="font-size-14 mb-0">- Skote User</p>
+                                                                        <h4 class="font-size-16 text-primary">
+                                                                            Abs1981</h4>
+                                                                        <p class="font-size-14 mb-0">- User</p>
                                                                     </div>
                                                                 </div>
 
@@ -57,13 +60,17 @@
 
                                                             <div class="item">
                                                                 <div class="py-3">
-                                                                    <p class="font-size-16 mb-4">" If Every Vendor on Envato
-                                                                        are as supportive as Themesbrand, Development with
-                                                                        be a nice experience. You guys are Wonderful. Keep
+                                                                    <p class="font-size-16 mb-4">" If Every Vendor on
+                                                                        Envato
+                                                                        are as supportive as Themesbrand, Development
+                                                                        with
+                                                                        be a nice experience. You guys are Wonderful.
+                                                                        Keep
                                                                         us the good work. "</p>
 
                                                                     <div>
-                                                                        <h4 class="font-size-16 text-primary">nezerious</h4>
+                                                                        <h4 class="font-size-16 text-primary">
+                                                                            nezerious</h4>
                                                                         <p class="font-size-14 mb-0">- Skote User</p>
                                                                     </div>
                                                                 </div>
@@ -88,10 +95,12 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5">
                                         <a href="index" class="d-block auth-logo">
-                                            <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="18"
-                                                class="auth-logo-dark">
-                                            <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="18"
-                                                class="auth-logo-light">
+                                            <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt=""
+                                                 height="18"
+                                                 class="auth-logo-dark">
+                                            <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt=""
+                                                 height="18"
+                                                 class="auth-logo-light">
                                         </a>
                                     </div>
                                     <div class="my-auto">
@@ -106,7 +115,8 @@
                                             <div class="p-2 mt-4">
                                                 <h4>Success !</h4>
                                                 <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos
-                                                    ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+                                                    ducimus qui blanditiis praesentium voluptatum deleniti atque
+                                                    corrupti
                                                     quos dolores et</p>
                                                 <div class="mt-4">
                                                     <a href="index" class="btn btn-success">Back to Home</a>
@@ -116,11 +126,14 @@
                                     </div>
 
                                     <div class="mt-4 mt-md-5 text-center">
-                                        <p class="mb-0">© <script>
+                                        <p class="mb-0">©
+                                            <script>
                                                 document.write(new Date().getFullYear())
 
-                                            </script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                                            Themesbrand</p>
+                                            </script>
+                                            Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by
+                                            Themesbrand
+                                        </p>
                                     </div>
                                 </div>
 
@@ -141,4 +154,4 @@
         <script src="{{ URL::asset('/assets/libs/owl.carousel/owl.carousel.min.js') }}"></script>
         <!-- auth-2-carousel init -->
         <script src="{{ URL::asset('/assets/js/pages/auth-2-carousel.init.js') }}"></script>
-    @endsection
+@endsection

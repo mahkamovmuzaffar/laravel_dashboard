@@ -66,6 +66,7 @@ return [
   "Kanban_Board" => "Kanban Board",
   "Create_Task" => "Create Task",
   "Contacts" => "Contacts",
+    "User_Management" => "USer Management",
   "User_Grid" => "User Grid",
   "User_List" => "User List",
   "Profile" => "Profile",

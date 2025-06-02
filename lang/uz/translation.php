@@ -62,6 +62,7 @@ return [
     "Kanban_Board" => "Kanban doskasi",
     "Create_Task" => "Vazifa yaratish",
     "Contacts" => "Kontaktlar",
+    "User_Management" => "Foydalanuvchilarni boshqaruvi",
     "User_Grid" => "Foydalanuvchi panellari",
     "User_List" => "Foydalanuvchilar ro‘yxati",
     "Profile" => "Profil",

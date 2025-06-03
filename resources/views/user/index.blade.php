@@ -25,11 +25,33 @@
             </div>
         </div>
 
+
         <!-- Users Table -->
         <div class="card">
             <div class="card-body">
+                <form method="GET" action="{{ route('users.index') }}" class="row g-3 mb-3">
+                    <div class="col-md-3">
+                        <input type="text" name="name" value="{{ request('name') }}" class="form-control" placeholder="@lang('translation.Name')">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="email" value="{{ request('email') }}" class="form-control" placeholder="@lang('translation.Email')">
+                    </div>
+                    <div class="col-md-3">
+                        <select name="sort" class="form-select">
+                            <option value="">@lang('translation.Sort_By')</option>
+                            <option value="role" {{ request('sort') == 'role' ? 'selected' : '' }}>@lang('translation.Role')</option>
+                            <option value="created_at" {{ request('sort') == 'created_at' ? 'selected' : '' }}>@lang('translation.Created_At')</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <button class="btn btn-primary" type="submit"><i class="bx bx-search"></i> @lang('translation.Search')</button>
+                        <a href="{{ route('users.index') }}" class="btn btn-light"><i class="bx bx-reset"></i> @lang('translation.Reset')</a>
+                    </div>
+                </form>
+
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover mb-0">
+
                         <thead class="table-light">
                         <tr>
                             <th>#</th>

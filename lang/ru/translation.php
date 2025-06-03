@@ -67,10 +67,22 @@ return [
     "Kanban_Board" => "Канбан Доска",
     "Create_Task" => "Создать задачу",
     "Contacts" => "Контакты",
+
     "User_Management" => "USer Management",
     "Template" => "Шаблоны",
     "User_Grid" => "Сетка пользователя",
     "User_List" => "Список пользователей",
+
+    'Name' => 'Имя',
+    'Email' => 'Эл. почта',
+    'Role' => 'Роль',
+    'Created_At' => 'Дата создания',
+    'Actions' => 'Действия',
+    'Add_User' => 'Добавить пользователя',
+    'Create_User' => 'Создать пользователя',
+    'Save' => 'Сохранить',
+
+
     "Profile" => "Профиль",
     "Blog" => "Блог",
     "Blog_List" => "Список блогов",

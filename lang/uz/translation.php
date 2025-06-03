@@ -62,9 +62,20 @@ return [
     "Kanban_Board" => "Kanban doskasi",
     "Create_Task" => "Vazifa yaratish",
     "Contacts" => "Kontaktlar",
+
     "User_Management" => "Foydalanuvchilarni boshqaruvi",
     "User_Grid" => "Foydalanuvchi panellari",
     "User_List" => "Foydalanuvchilar ro‘yxati",
+
+    'Name' => 'Ism',
+    'Email' => 'Elektron pochta',
+    'Role' => 'Rol',
+    'Created_At' => 'Yaratilgan sana',
+    'Actions' => 'Amallar',
+    'Add_User' => 'Foydalanuvchi qo‘shish',
+    'Создать' => 'Foydalanuvchi yaratish',
+    'Save' => 'Saqlash',
+
     "Profile" => "Profil",
     "Blog_List" => "Blog ro‘yxati",
     "Blog_Grid" => "Blog panellari",

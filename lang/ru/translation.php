@@ -68,6 +68,7 @@ return [
     "Create_Task" => "Создать задачу",
     "Contacts" => "Контакты",
     "User_Management" => "USer Management",
+    "Template" => "Шаблоны",
     "User_Grid" => "Сетка пользователя",
     "User_List" => "Список пользователей",
     "Profile" => "Профиль",

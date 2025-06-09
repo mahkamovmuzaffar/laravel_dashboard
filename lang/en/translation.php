@@ -83,6 +83,13 @@ return [
     'Sort_By' => 'Sort By',
     'No_users_found' => 'No users found',
 
+//    Permissions_List
+//    Create_Permission
+//    Add_Permission
+//    Permission_Name
+//    Description
+//    No_permissions_found
+
 
     "Profile" => "Profile",
     "Blog" => "Blog",

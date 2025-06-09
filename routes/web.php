@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\PermissionController;
 use App\Http\Controllers\Dashboard\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class,
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
 
 Route::resource('users', UserController::class);
+Route::resource('permissions', PermissionController::class);
 
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 

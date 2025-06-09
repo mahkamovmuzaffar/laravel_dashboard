@@ -10,43 +10,52 @@ class PermissionController extends Controller
 {
     public function index()
     {
-        $roles = Role::with('permissions')->get();
-        $permissions = Permission::all();
-        return view('roles.index', compact('roles', 'permissions'));
+        $permissions = Permission::orderBy('created_at', 'desc')->get();
+        return view('permission.index', compact('permissions'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|unique:roles,name,' . $request->id,
-            'permissions' => 'array|nullable'
+            'name' => 'required|string|max:255|unique:permissions,name,' . $request->id,
+            'description' => 'nullable|string|max:1000',
         ]);
 
-        $role = Permission::updateOrCreate(
+        Permission::updateOrCreate(
             ['id' => $request->id],
-            ['name' => $request->name]
+            ['name' => $request->name, 'description' => $request->description]
         );
 
-        if ($request->has('permissions')) {
-            $role->syncPermissions($request->permissions);
-        }
-
-        return redirect()->back()->with('success', 'Role saved successfully.');
+        return redirect()->route('permissions.index')->with('success', 'Permission saved successfully.');
     }
 
-    public function show($id)
+    public function edit($id)
     {
-        $role = Permission::with('permissions')->findOrFail($id);
-        return response()->json([
-            'role' => $role,
-            'permissions' => $role->permissions->pluck('id')
+        $permission = Permission::findOrFail($id);
+        return response()->json($permission); // for AJAX editing
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255|unique:permissions,name,' . $id,
+            'description' => 'nullable|string|max:1000',
         ]);
+
+        $permission = Permission::findOrFail($id);
+        $permission->update([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+
+        return redirect()->route('permissions.index')->with('success', 'Permission updated successfully.');
     }
 
     public function destroy($id)
     {
-        $role = Permission::findOrFail($id);
-        $role->delete();
-        return redirect()->back()->with('success', 'Role deleted.');
+        $permission = Permission::findOrFail($id);
+        $permission->delete();
+
+        return redirect()->route('permissions.index')->with('success', 'Permission deleted successfully.');
     }
 }

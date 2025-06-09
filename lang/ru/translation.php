@@ -73,6 +73,13 @@ return [
     "User_Grid" => "Сетка пользователя",
     "User_List" => "Список пользователей",
 
+    'Permissions_List' => 'Список разрешений',
+    'Create_Permission' => 'Создать разрешение',
+    'Add_Permission' => 'Добавить разрешение',
+    'Permission_Name' => 'Название разрешения',
+    'Description' => 'Описание',
+    'No_permissions_found' => 'Разрешения не найдены.',
+
     'Name' => 'Имя',
     'Email' => 'Эл. почта',
     'Role' => 'Роль',

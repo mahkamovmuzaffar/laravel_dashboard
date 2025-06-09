@@ -67,6 +67,13 @@ return [
     "User_Grid" => "Foydalanuvchi panellari",
     "User_List" => "Foydalanuvchilar ro‘yxati",
 
+    'Permissions_List' => 'Ruxsatlar ro‘yxati',
+    'Create_Permission' => 'Ruxsat yaratish',
+    'Add_Permission' => 'Ruxsat qo‘shish',
+    'Permission_Name' => 'Ruxsat nomi',
+    'Description' => 'Tavsif',
+    'No_permissions_found' => 'Ruxsatlar topilmadi.',
+
     'Name' => 'Ism',
     'Email' => 'Elektron pochta',
     'Role' => 'Rol',

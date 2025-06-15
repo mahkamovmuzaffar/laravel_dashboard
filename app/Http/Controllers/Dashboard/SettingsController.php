@@ -12,10 +12,11 @@ class SettingsController extends Controller
 
     public function index()
     {
-        // You can fetch from DB or config or cache
+        // Example: from DB, file, or config
         $settings = [
-            'two_factor_auth' => config('app.two_factor_auth', false),
-            // add other settings as needed
+            'telegram_token' => config('services.telegram.token'),
+            'whatsapp_token' => config('services.whatsapp.token'),
+            'openai_key'     => config('services.openai.key'),
         ];
 
         return view('settings.index', compact('settings'));
@@ -23,17 +24,23 @@ class SettingsController extends Controller
 
     public function update(Request $request)
     {
-        // Validate incoming setting values
         $request->validate([
-            'two_factor_auth' => 'required|boolean',
+            'telegram_token' => 'nullable|string',
+            'whatsapp_token' => 'nullable|string',
+            'openai_key'     => 'nullable|string',
         ]);
 
-        // Store in config/cache/db — here is just an example
-        // Ideally save to DB, but for demo:
-        Cache::put('settings.two_factor_auth', $request->two_factor_auth);
+        // Store these to DB or file — example using config:option, or custom Setting model
+        foreach ($request->only(['telegram_token', 'whatsapp_token', 'openai_key']) as $key => $value) {
+            \DB::table('settings')->updateOrInsert(
+                ['key' => $key],
+                ['value' => $value]
+            );
+        }
 
-        return back()->with('success', 'Settings updated successfully.');
+        return back()->with('success', 'Settings saved successfully.');
     }
+
 
 
 }

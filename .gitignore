@@ -5,6 +5,7 @@
 /storage/*
 /storage/*.key
 /storage
+/storage/framework/*
 /storage/logs
 /.env
 .env.*

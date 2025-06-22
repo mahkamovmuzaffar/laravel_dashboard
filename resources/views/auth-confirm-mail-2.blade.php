@@ -132,7 +132,7 @@
 
                                             </script>
                                             Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                                            Themesbrand
+                                            Inlab Digital
                                         </p>
                                     </div>
                                 </div>

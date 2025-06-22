@@ -1,6 +1,6 @@
 /*
 Template Name: Skote - Admin & Dashboard Template
-Author: Themesbrand
+Author: Inlab Digital
 Version: 3.3.0.
 Website: https://themesbrand.com/
 Contact: themesbrand@gmail.com
@@ -63,7 +63,7 @@ File: Main Css File
 @import "custom/plugins/table-editable";
 @import "custom/plugins/apexcharts";
 @import "custom/plugins/echarts";
-@import "custom/plugins/flot";  
+@import "custom/plugins/flot";
 @import "custom/plugins/sparkline-chart";
 @import "custom/plugins/google-map";
 @import "custom/plugins/vector-maps";

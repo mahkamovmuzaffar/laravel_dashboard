@@ -4,6 +4,7 @@
 /public/storage
 /storage/*
 /storage/*.key
+/storage
 /storage/logs
 /.env
 .env.*

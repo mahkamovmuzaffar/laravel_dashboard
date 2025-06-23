@@ -19,7 +19,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{route('users.index')}}" key="t-users">Users</a></li>
                         <li><a href="{{route('permissions.index')}}" key="t-permissions">Permissions</a></li>
-                        <li><a href="#" key="t-roles">Roles</a></li>
+                        <li><a href="{{route('roles.index')}}" key="t-roles">Roles</a></li>
                     </ul>
                 </li>
 

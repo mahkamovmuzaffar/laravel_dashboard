@@ -80,6 +80,13 @@ return [
     'Description' => 'Описание',
     'No_permissions_found' => 'Разрешения не найдены.',
 
+    'Roles_List' => 'Список ролей',
+    'Create_Role' => 'Создать роль',
+    'Add_Role' => 'Добавить роль',
+    'Role_Name' => 'Название роли',
+    'Permissions' => 'Права доступа',
+    'No_roles_found' => 'Роли не найдены',
+
     'Name' => 'Имя',
     'Email' => 'Эл. почта',
     'Role' => 'Роль',

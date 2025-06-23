@@ -90,6 +90,12 @@ return [
     'Description' => 'Description',
     'No_permissions_found' => 'No permissions found.',
 
+    'Roles_List' => 'Roles List',
+    'Create_Role' => 'Create Role',
+    'Add_Role' => 'Add Role',
+    'Role_Name' => 'Role Name',
+    'Permissions' => 'Permissions',
+    'No_roles_found' => 'No roles found',
 
     "Profile" => "Profile",
     "Blog" => "Blog",

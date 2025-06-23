@@ -74,6 +74,13 @@ return [
     'Description' => 'Tavsif',
     'No_permissions_found' => 'Ruxsatlar topilmadi.',
 
+    'Roles_List' => 'Rollar roʻyxati',
+    'Create_Role' => 'Rol yaratish',
+    'Add_Role' => 'Rol qoʻshish',
+    'Role_Name' => 'Rol nomi',
+    'Permissions' => 'Ruxsatlar',
+    'No_roles_found' => 'Rollar topilmadi',
+
     'Name' => 'Ism',
     'Email' => 'Elektron pochta',
     'Role' => 'Rol',

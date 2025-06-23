@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
@@ -13,7 +14,7 @@ class RoleController extends Controller
     {
         $roles = Role::with('permissions')->get();
         $permissions = Permission::all();
-        return view('roles.index', compact('roles', 'permissions'));
+        return view('role.index', compact('roles', 'permissions'));
     }
 
     public function store(Request $request)

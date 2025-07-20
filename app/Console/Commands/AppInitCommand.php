@@ -13,14 +13,14 @@ class AppInitCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'app:app-init-command';
+    protected $signature = 'app-init';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Populate users, roles, permissions, error messages, and check services.';
 
     /**
      * Execute the console command.

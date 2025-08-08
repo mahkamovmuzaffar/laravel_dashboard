@@ -30,34 +30,16 @@ class AppInitCommand extends Command
         $this->newLine(2);
         $this->info('🚀 Starting system population...');
 
-        // --- USERS ---
-        $this->task("👤 Populating users", function () {
-            Artisan::call('db:seed', ['--class' => 'UserSeeder']);
-            return true;
-        });
-
-        // --- ERROR MESSAGES ---
-        $this->task("❗ Seeding error messages", function () {
+        $this->task("🌱 Running all database seeders", function () {
             try {
-                Artisan::call('db:seed', ['--class' => 'ErrorMessageSeeder']);
+                Artisan::call('db:seed');
                 return true;
             } catch (Throwable $e) {
-                $this->error("ErrorMessageSeeder failed: " . $e->getMessage());
+                $this->error("Seeding failed: " . $e->getMessage());
                 return false;
             }
         });
 
-        // --- ROLES ---
-        $this->task("🔐 Populating roles", function () {
-            Artisan::call('db:seed', ['--class' => 'RoleSeeder']);
-            return true;
-        });
-
-        // --- PERMISSIONS ---
-        $this->task("🛡️ Populating permissions", function () {
-            Artisan::call('db:seed', ['--class' => 'PermissionSeeder']);
-            return true;
-        });
 
         // --- SERVICES ---
         $this->task("🔍 Checking service configs", function () {

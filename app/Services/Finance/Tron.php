@@ -1,24 +1,19 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Finance;
 
 use Illuminate\Support\Facades\Http;
 
-class TronService
+class Tron
 {
-    protected $apiUrl;
-    protected $apiKey;
-    protected $wallet;
-    protected $privateKey;
+    private $apiUrl     = 'https://api.trongrid.io';
+    private $apiKey     = 'your_tron_api_key_here';
+    private $wallet     = 'your_wallet_address';
+    private $privateKey = 'your_private_key_here';
 
-    public function __construct()
-    {
-        $this->apiUrl = config('tron.api_url');
-        $this->apiKey = config('tron.api_key');
-        $this->wallet = config('tron.wallet');
-        $this->privateKey = config('tron.private_key');
-    }
-
+    /**
+     * Get wallet balance in TRX
+     */
     public function getBalance()
     {
         $response = Http::withHeaders([
@@ -28,9 +23,42 @@ class TronService
         return $response->json();
     }
 
+    /**
+     * Get transaction history for the wallet
+     */
+    public function getTransactions($limit = 20)
+    {
+        $response = Http::withHeaders([
+            'TRON-PRO-API-KEY' => $this->apiKey,
+        ])->get("{$this->apiUrl}/v1/accounts/{$this->wallet}/transactions", [
+            'limit' => $limit,
+            'order_by' => 'block_timestamp,desc'
+        ]);
+
+        return $response->json();
+    }
+
+    /**
+     * Get transaction details by transaction ID (txid)
+     */
+    public function getTransactionInfo($txid)
+    {
+        $response = Http::withHeaders([
+            'TRON-PRO-API-KEY' => $this->apiKey,
+        ])->get("{$this->apiUrl}/v1/transactions/{$txid}");
+
+        return $response->json();
+    }
+
+    /**
+     * Send TRX to another wallet (raw transaction - needs signing)
+     * For production, use TronWeb or gRPC for signing securely.
+     */
     public function sendTransaction($to, $amount)
     {
-        // Example: prepare Tron transaction logic here
-        return "Sending {$amount} TRX to {$to}";
+        return [
+            'status' => 'pending',
+            'message' => "Sending {$amount} TRX to {$to} from {$this->wallet}."
+        ];
     }
 }

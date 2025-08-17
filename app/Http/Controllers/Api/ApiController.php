@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 
-class JsonRpcController extends Controller
+class ApiController extends Controller
 {
+    // A simple example method
+    private function addNumbers($a, $b)
+    {
+        return $a + $b;
+    }
 
 
     public function handle(Request $request)

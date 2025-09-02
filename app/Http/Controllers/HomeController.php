@@ -32,6 +32,7 @@ class HomeController extends Controller
             return view($request->path());
         }
         return abort(404);
+
     }
 
     public function root(): object

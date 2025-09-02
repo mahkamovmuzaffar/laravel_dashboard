@@ -34,7 +34,7 @@ class HomeController extends Controller
         return abort(404);
     }
 
-    public function root()
+    public function root(): object
     {
         return view('index');
     }

@@ -52,7 +52,7 @@ class HomeController extends Controller
             return redirect()->back();
         }
     }
-
+//Profile Update
     public function updateProfile(Request $request, $id)
     {
         $request->validate([

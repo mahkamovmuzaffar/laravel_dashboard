@@ -31,7 +31,7 @@ class HomeController extends Controller
         if (view()->exists($request->path())) {
             return view($request->path());
         }
-        return abort(404);
+        return abort(404); //
 
     }
 

@@ -16,6 +16,7 @@ class SettingsController extends Controller
         $settings = [
             'telegram_token' => config('services.telegram.token'),
             'whatsapp_token' => config('services.whatsapp.token'),
+            'whatsapp_token' => config('services.whatsapp.token'),
             'openai_key'     => config('services.openai.key'),
         ];
 
